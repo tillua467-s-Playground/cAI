@@ -1,4 +1,5 @@
 out/
-.o
-.exe
 .vscode/
+data/
+*.o
+*.exe
