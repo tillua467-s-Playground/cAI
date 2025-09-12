@@ -1,4 +1,4 @@
-#include "phraser.h"
+#include "../headers/phraser.h"
 
 long wordCount(FILE *filestream, char *filename)
 {

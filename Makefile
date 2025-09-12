@@ -8,8 +8,8 @@ TARGET = main
 T2 = genrate
 T3 = memory
 T4 = phraser
-
-SRC_FILES = $(SRC)/genrate.c $(SRC)/memory.c $(SRC)/phraser.c $(SRC)/main.c
+T5 = node
+SRC_FILES = $(SRC)/genrate.c $(SRC)/memory.c $(SRC)/phraser.c  $(SRC)/node.c $(SRC)/main.c
 
 all: $(OUT)/$(TARGET)
 	./$(OUT)/$(TARGET)
@@ -31,9 +31,14 @@ $(OUT)/$(T4): $(SRC)/phraser.c | $(OUT)
 	$(CC) $(CFLAGS) $< -o $@
 	./$@
 
+$(OUT)/$(T5): $(SRC)/node.c | $(OUT)
+	$(CC) $(CFLAGS) $< -o $@
+	./$@
+
 gen: $(OUT)/$(T2)
 mem: $(OUT)/$(T3)
 phar: $(OUT)/$(T4)
+node: $(OUT)/$(T5)
 main: $(OUT)/$(TARGET)
 	./$(OUT)/$(TARGET)
 
