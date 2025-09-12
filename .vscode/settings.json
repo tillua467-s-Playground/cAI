@@ -1,0 +1,14 @@
+{
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "files.associations": {
+    "raylib.h": "c",
+    "stdbool.h": "c",
+    "random": "c"
+  },
+  "cmake.ignoreCMakeListsMissing": true
+}
