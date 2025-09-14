@@ -9,6 +9,7 @@
 long wordCount(FILE *filestream, char *filename);
 // allocate enough memory the array before calling this function (wordCount * sizeof(char *))
 void wordOrgnizer(FILE *fp, char *filename, char **arr);
+void TextToWordArr(char *text, char *arr[], int *words);
 void freeArr(char **arr, int members);
 
 #endif

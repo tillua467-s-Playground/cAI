@@ -23,5 +23,7 @@ Node genrateNode(char **dataarr, int arrMem, char *word)
         i++;
     }
 
+    node.countN = count;
+
     return node;
 }

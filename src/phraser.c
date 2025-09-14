@@ -58,6 +58,21 @@ void wordOrgnizer(FILE *fp, char *filename, char **arr)
     fclose(fp);
 }
 
+void TextToWordArr(char *text, char *arr[], int *words)
+{
+    int count = 0;
+    char *word = strtok(text, " \t\n");
+
+    while (word != NULL)
+    {
+        arr[count] = malloc(strlen(word) + 1);
+        strcpy(arr[count], word);
+        count++;
+        word = strtok(NULL, " \t\n");
+    }
+    *words = count;
+}
+
 void freeArr(char **arr, int members)
 {
     int i = 0;

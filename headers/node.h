@@ -9,7 +9,7 @@ typedef struct Node
 {
     char *word;
     char *wordNext[MAXNWORD];
-    char countN;
+    int countN;
 } Node;
 
 Node genrateNode(char **dataarr, int arrMem, char *word);
