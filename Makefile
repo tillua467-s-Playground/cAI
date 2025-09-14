@@ -9,6 +9,7 @@ T2 = genrate
 T3 = memory
 T4 = phraser
 T5 = node
+T6 = dictionary
 SRC_FILES = $(SRC)/genrate.c $(SRC)/memory.c $(SRC)/phraser.c  $(SRC)/node.c $(SRC)/main.c
 
 all: $(OUT)/$(TARGET)
@@ -35,10 +36,15 @@ $(OUT)/$(T5): $(SRC)/node.c | $(OUT)
 	$(CC) $(CFLAGS) $< -o $@
 	./$@
 
+$(OUT)/$(T6): $(SRC)/dictionary.c | $(OUT)
+	$(CC) $(CFLAGS) $< -o $@
+	./$@
+
 gen: $(OUT)/$(T2)
 mem: $(OUT)/$(T3)
 phar: $(OUT)/$(T4)
 node: $(OUT)/$(T5)
+dict: $(OUT)/$(T6)
 main: $(OUT)/$(TARGET)
 	./$(OUT)/$(TARGET)
 
